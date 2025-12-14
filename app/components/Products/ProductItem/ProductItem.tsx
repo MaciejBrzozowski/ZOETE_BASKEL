@@ -2,10 +2,10 @@ export default function ProductItem(props: any) {
   return (
     <tr className="table_row">
       <td>
-        <img className="product_image" src="./public/kruszonka.png" alt="Niby Szarlotka" />
+        <img className="product_image" src={props.image} alt="product picture" />
       </td>
-      <td>Polish Apple Pie (Szarlotka)</td>
-      <td>Traditional Polish apple pie with cinnamon and a buttery crust.</td>
+      <td>{props.name}</td>
+      <td>{props.description}</td>
       <td>{props.price}</td>
     </tr>
   );

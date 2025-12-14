@@ -2,18 +2,16 @@ import ProductItem from "./ProductItem/ProductItem";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-const propData = {
-  price: "999 PLN",
-};
-
 export default function Products() {
-  const [productData, setProductData] = useState([]);
+  let nextId = 0;
+  const [productData, setProductData] = useState(Array<object>());
+
   useEffect(() => {
     axios
-      .get("https://dummyjson.com/products")
+      .get("https://raw.githubusercontent.com/MaciejBrzozowski/ZOETE_BASKEL_CONFIG/a74f17cfcad7246369e54ae0267443bef0bd8ce2/products.json")
       .then((response) => {
-        console.log(response.data.products[0].title);
-        setProductData(response.data.products[0].title);
+        console.log(response.data.products);
+        setProductData([...response.data.products]);
       })
       .catch((error) => {
         console.error("There was an error fetching the products!", error);
@@ -23,41 +21,10 @@ export default function Products() {
   return (
     <div>
       <table>
-        <tr className="table_row">
-          <td>
-            <img className="product_image" src="./public/kruszonka.png" alt="Niby Szarlotka" />
-          </td>
-          <td>Polish Apple Pie (Szarlotka)</td>
-          <td>Traditional Polish apple pie with cinnamon and a buttery crust.</td>
-          <td>15 PLN</td>
-        </tr>
-        <tr className="table_row">
-          <td>
-            <img className="product_image" src="./public/jakiesCus.png" alt="Chyba to ciasto?" />
-          </td>
-          <td>Dutch Apple Cake (Appelgebak)</td>
-          <td>classNameic Dutch apple cake with raisins and whipped cream.</td>
-          <td>12 EUR</td>
-        </tr>
-        <tr className="table_row">
-          <td>
-            <img className="product_image" src="./public/faworki.png" alt="Faworki są pyszne" />
-          </td>
-          <td>Polish Faworki</td>
-          <td>Crispy, fried pastry dusted with powdered sugar.</td>
-          <td>10 PLN</td>
-        </tr>
-        <tr className="table_row">
-          <td>
-            <img className="product_image" src="./public/punczki.png" alt="Oliebollen" />
-          </td>
-          <td>Dutch Oliebollen</td>
-          <td>Traditional Dutch doughnuts filled with raisins.</td>
-          <td>8 EUR</td>
-        </tr>
-        <ProductItem {...propData} />
+        {productData.map((item: any) => (
+          <ProductItem key={"ProductItem_" + nextId++} {...item} />
+        ))}
       </table>
-      <p>{productData}</p>
     </div>
   );
 }
