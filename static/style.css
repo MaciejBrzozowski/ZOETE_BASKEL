@@ -43,9 +43,16 @@ nav .nav_item:hover {
   margin-bottom: 20px;
 }
 
+.homePage {
+  text-align: center;
+  font-size: 32px;
+  width: 75%;
+  margin-bottom: 20px;
+}
+
 .aboutus {
   text-align: center;
-  font-size: 36px;
+  font-size: 32px;
   width: 75%;
   margin-bottom: 20px;
 }
@@ -91,4 +98,21 @@ padding-left: 20px;
 .payment p{
   font-size: 32px;
   margin-bottom: 30px;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.padding20{
+  padding-left: 20px;
+}
+
+.listStyle{
+  list-style-position: inside;
+  padding-left: 50px;
+}
+
+.cakeTable{
+  padding-left: 35px;
 }
