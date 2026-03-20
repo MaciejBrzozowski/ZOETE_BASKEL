@@ -7,16 +7,16 @@
 }
 .nav_container {
   background-color: #091CC8;
-  width: 100%;
+  width: 100vw;
   height: 4em;
 }
 
 .nav_item{
   width: 2em;
   color: white;
-  font-size: 20px;
-  line-height: 60px;
-  margin-left: 20px;
+  font-size: 1.25em;
+  line-height: 3.75em;
+  margin-left: 1.25em;
   text-decoration: none;
   padding-left: 2em;
   padding-right: 2em;
@@ -48,6 +48,7 @@ nav .nav_item:hover {
   font-size: 32px;
   width: 75%;
   margin-bottom: 20px;
+  max-width:100%;
 }
 
 .aboutus {
