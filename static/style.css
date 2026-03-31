@@ -6,14 +6,14 @@
 }
 
 @font-face {
-	font-family: 'MyriadProBold';
+	font-family: 'MyriadPro';
 	src: url('https://github.com/MaciejBrzozowski/ZOETE_BASKEL_CONFIG/blob/master/myriad-pro/MYRIADPRO-BOLD.OTF');
 	font-weight: bolder;
 	font-style:normal ;
 }
 
 @font-face {
-	font-family: 'MyriadProSemiBold';
+	font-family: 'MyriadPro';
 	src: url('https://github.com/MaciejBrzozowski/ZOETE_BASKEL_CONFIG/blob/master/myriad-pro/MYRIADPRO-SEMIBOLD.OTF');
 	font-weight: bold;
 	font-style: normal;
@@ -57,6 +57,7 @@ nav .nav_item:hover {
 .centerImg {
   display: flex;
   justify-content: center;
+  background-color: #E9C6B0;
 }
 
 .center {
@@ -85,6 +86,7 @@ nav .nav_item:hover {
 
 .aboutus {
   text-align: center;
+  font-family:  'MyriadPro';
   font-size: 32px;
   width: 75%;
   margin-bottom: 20px;
@@ -95,8 +97,8 @@ nav .nav_item:hover {
 }
 
 .product_image {
-  width: 336px;
-  height: 336px;
+  width: 240px;
+  height: 240px;
   object-fit: cover;
   padding-right: 40px;
   padding-left: 30px;
@@ -110,13 +112,12 @@ padding-top: 20px;
 padding-left: 20px;
 }
 
-.location_image{
-  float: left;
-  width: 800px;
+.fontMyriadProBold{
+  font-family: 'MyriadProBold';
 }
-.location_image img{
-  width: 100%;
-  height: auto;
+
+.fontMyriadPro{
+  font-family: 'MyriadPro';
 }
 
 .contact_details{ 
@@ -146,8 +147,26 @@ padding-left: 20px;
   padding-left: 50px;
 }
 
-.cakeTable{
-  padding-left: 35px;
+.cakeTable tr td {
+  font-family: 'MyriadPro';
 }
 
+.cakeTable{
+  padding-left: 35px;
+  padding-top: 20px;
+}
 
+.wave {
+  --size: 10px;
+  --m: 0.95;
+  --p: calc(var(--m)*var(--size));
+  --R: calc(var(--size)*sqrt(var(--m)*var(--m) + 1));
+
+  mask:
+    radial-gradient(var(--R) at 50% calc(100% - (var(--size) + var(--p))), #000 99%, #0000 101%)
+      calc(50% - 2 * var(--size)) 0/calc(4 * var(--size)) 100%,
+    radial-gradient(var(--R) at 50% calc(100% + var(--p)), #0000 99%, #000 101%) 
+      50% calc(100% - var(--size)) / calc(4 * var(--size)) 100% repeat-x;
+  background: #E9C6B0;
+  height: 15px;
+}
