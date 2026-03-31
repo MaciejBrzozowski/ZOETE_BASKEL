@@ -23,7 +23,7 @@ const generateTableRow = function (rowData) {
 
 axios
   .get(
-    'https://raw.githubusercontent.com/MaciejBrzozowski/ZOETE_BASKEL_CONFIG/refs/heads/master/products.json'
+    'https://raw.githubusercontent.com/ZoeteBaksel/-ZOETE_BAKSEL_CONFIG-/refs/heads/master/products.json'
   )
   .then(function (response) {
     if (response.status == 200) {
