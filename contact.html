@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="contact">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zoete baksel</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="./static/style.css" />
   </head>
   <body class="background">
@@ -28,26 +29,35 @@
       </header>
     </div>
     <div class="contact_page">
-      <p class="padding20 fontMyriadPro">
+      <p class="padding20 fontMyriadPro" id="ContactUsText1">
         Wil je iets lekkers bestellen of heb je een speciaal idee? Laat me
         gerust weten:
       </p>
       <ul class="listStyle fontMyriadPro">
-        <li>wat je wilt bestellen</li>
-        <li>voor hoeveel personen</li>
-        <li>datum</li>
-        <li>eventuele wensen (smaak, allergieën, thema)</li>
+        <li id="ContactUsListItem1">wat je wilt bestellen</li>
+        <li id="ContactUsListItem2">voor hoeveel personen</li>
+        <li id="ContactUsListItem3">datum</li>
+        <li id="ContactUsListItem4">
+          eventuele wensen (smaak, allergieën, thema)
+        </li>
       </ul>
-      <p class="padding20 fontMyriadPro">Ik denk graag met je mee!</p>
-      <p class="bold padding20 fontMyriadPro">
-        Gebak bestellen kan telefonisch ( 06-33751507
-        <a href="tel:+310633751507">06-33751507</a>
-        ) of door te mailen naar
-        <a href="mailto:info@zoetebaksel.nl">info@zoetebaksel.nl</a>
+      <p class="padding20 fontMyriadPro" id="ContactUsText2">
+        Ik denk graag met je mee!
       </p>
-      <p class="bold padding20 fontMyriadPro">
+      <div class="bold padding20 fontMyriadPro" id="ContactUsText3">
+        <p id="ContactUsText3P1">
+          Gebak bestellen kan telefonisch ( 06-33751507
+        </p>
+        <a href="tel:+310633751507" id="ContactUsPhoneNumber">06-33751507</a>
+        <p id="ContactUsText3P2">) of door te mailen naar</p>
+        <a href="mailto:info@zoetebaksel.nl" id="ContactUsEmail"
+          >info@zoetebaksel.nl</a
+        >
+      </div>
+      <p class="bold padding20 fontMyriadPro" id="ContactUsText4">
         Afhaalmomenten zijn in overleg mogelijk.
       </p>
     </div>
+    <script src="./static/js/translations.js"></script>
   </body>
 </html>

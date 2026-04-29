@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="index">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zoete baksel</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="./static/style.css" />
   </head>
   <body class="background" id="background">
@@ -31,17 +32,17 @@
       <div>
         <main>
           <div class="center homePage">
-            <p>Welkom bij Zoete baksel.</p>
-            <p>
+            <p id="WelcomeText">Welkom bij Zoete baksel.</p>
+            <p id="DescriptionText">
               Huisgemaakt. Vers. Met liefde gebakken. Bij Zoete baksel draait
               alles om ambacht en smaak.
             </p>
-            <p>
+            <p id="OfferText">
               Vanuit mijn eigen keuken bak ik taarten, tartelettes, koekjes &
               zoete hapjes, gistgebakken producten en zoete lekkernijen op
-              bestelling .
+              bestelling.
             </p>
-            <p>
+            <p id="ClosingText">
               center Alles wordt op bestelling gemaakt, zodat je altijd iets
               vers krijgt.
             </p>
@@ -52,5 +53,6 @@
         <footer></footer>
       </div>
     </div>
+    <script src="./static/js/translations.js"></script>
   </body>
 </html>
