@@ -12,11 +12,12 @@ let defaultLanguage = 'nl'
         defaultLanguage = data.default
         translations = data.translations[defaultLanguage]
         href = data.href
-
-        console.log(data)
-        href.forEach(element => {
-          console.log(element)
-        })
+        for (const item in href) {
+          const el = document.getElementById(item)
+          if (el) {
+            el.href = href[item]
+          }
+        }
 
         if (document.documentElement.id == 'index') {
           const htmlIdList = [
